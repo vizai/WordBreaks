@@ -1,0 +1,9 @@
+C:\Users\Administrator\Source\Repos\WordBreaks\Problems\ProblemsTests\bin\Debug\ProblemsTests.dll
+C:\Users\Administrator\Source\Repos\WordBreaks\Problems\ProblemsTests\bin\Debug\ProblemsTests.pdb
+C:\Users\Administrator\Source\Repos\WordBreaks\Problems\ProblemsTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Administrator\Source\Repos\WordBreaks\Problems\ProblemsTests\bin\Debug\Problems.dll
+C:\Users\Administrator\Source\Repos\WordBreaks\Problems\ProblemsTests\bin\Debug\Problems.pdb
+C:\Users\Administrator\Source\Repos\WordBreaks\Problems\ProblemsTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\Administrator\Source\Repos\WordBreaks\Problems\ProblemsTests\obj\Debug\ProblemsTests.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Source\Repos\WordBreaks\Problems\ProblemsTests\obj\Debug\ProblemsTests.dll
+C:\Users\Administrator\Source\Repos\WordBreaks\Problems\ProblemsTests\obj\Debug\ProblemsTests.pdb

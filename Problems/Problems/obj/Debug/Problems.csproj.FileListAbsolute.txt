@@ -1,0 +1,11 @@
+c:\users\administrator\documents\visual studio 2015\Projects\Problems\Problems\bin\Debug\Problems.exe.config
+c:\users\administrator\documents\visual studio 2015\Projects\Problems\Problems\bin\Debug\Problems.exe
+c:\users\administrator\documents\visual studio 2015\Projects\Problems\Problems\bin\Debug\Problems.pdb
+c:\users\administrator\documents\visual studio 2015\Projects\Problems\Problems\obj\Debug\Problems.csprojResolveAssemblyReference.cache
+c:\users\administrator\documents\visual studio 2015\Projects\Problems\Problems\obj\Debug\Problems.exe
+c:\users\administrator\documents\visual studio 2015\Projects\Problems\Problems\obj\Debug\Problems.pdb
+C:\Users\Administrator\Source\Repos\WordBreaks\Problems\Problems\bin\Debug\Problems.dll.config
+C:\Users\Administrator\Source\Repos\WordBreaks\Problems\Problems\bin\Debug\Problems.dll
+C:\Users\Administrator\Source\Repos\WordBreaks\Problems\Problems\bin\Debug\Problems.pdb
+C:\Users\Administrator\Source\Repos\WordBreaks\Problems\Problems\obj\Debug\Problems.dll
+C:\Users\Administrator\Source\Repos\WordBreaks\Problems\Problems\obj\Debug\Problems.pdb
