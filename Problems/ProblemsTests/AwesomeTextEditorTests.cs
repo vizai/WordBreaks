@@ -23,7 +23,7 @@ namespace Problems.Tests
             Assert.AreEqual(expectedResult, actualResult);
         }
         [TestMethod()]
-        public void GetStringWithLineBreaksTest_WhenInputNull()
+        public void GetStringWithLineBreaksTest_WhenInputStringIsNull()
         {
             string input = null;
             string expectedResult = string.Empty;
@@ -35,7 +35,7 @@ namespace Problems.Tests
         }
 
         [TestMethod()]
-        public void GetStringWithLineBreaksTest_WhenInputEmpty()
+        public void GetStringWithLineBreaksTest_WhenInputStringIsEmpty()
         {
             string input = string.Empty;
             string expectedResult = string.Empty;
@@ -48,7 +48,7 @@ namespace Problems.Tests
 
         [TestMethod()]
         [ExpectedException(typeof(ArgumentException),"column")]
-        public void GetStringWithLineBreaksTest_WhenColumnIsZero()
+        public void GetStringWithLineBreaksTest_WhenColumnValueIsZero()
         {
             string input = "The quick brown fox jumped over the lazy dog.";
             int column = 0;
@@ -57,7 +57,7 @@ namespace Problems.Tests
         }
         [TestMethod()]
         [ExpectedException(typeof(ArgumentException), "column")]
-        public void GetStringWithLineBreaksTest_WhenColumnIsNegetiveNumber()
+        public void GetStringWithLineBreaksTest_WhenColumnValueIsNegetiveNumber()
         {
             string input = "The quick brown fox jumped over the lazy dog.";
             int column = -10;
@@ -67,7 +67,7 @@ namespace Problems.Tests
 
         [TestMethod()]
         [ExpectedException(typeof(ArgumentException), "column")]
-        public void GetStringWithLineBreaksTest_WhenColumnIsGrearThanInputStringLength()
+        public void GetStringWithLineBreaksTest_WhenColumnValueIsGreaterThanInputStringLength()
         {
             string input = "The quick brown fox jumped over the lazy dog.";
             int column = 100;
@@ -76,7 +76,7 @@ namespace Problems.Tests
         }
 
         [TestMethod()]
-        public void GetStringWithLineBreaksTest_WhenStringIsBigBank()
+        public void GetStringWithLineBreaksTest_WhenInputStringIsABigBank()
         {
             string input = "                              ";
             int column = 5;
@@ -85,6 +85,24 @@ namespace Problems.Tests
             Assert.AreEqual(string.Empty, actualResult);
         }
 
-     
+        [TestMethod()]
+        public void GetStringWithLineBreaksTest_WhenInputStringIsSingleWordWithLengthGreaterThanColumnValue()
+        {
+            string input = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            int column = 5;
+            AwesomeTextEditor obj = new Problems.AwesomeTextEditor();
+            string actualResult = obj.GetStringWithLineBreaks(input, column);
+            Assert.AreEqual(input, actualResult);
+        }
+        [TestMethod()]
+        public void GetStringWithLineBreaksTest_WhenInputStringContainsWordsWithLengthGreaterThanColumnLength()
+        {
+            string input = "bbbb aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa ccccc";
+            string expectedResult = "bbbb\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nccccc";
+            int column = 5;
+            AwesomeTextEditor obj = new Problems.AwesomeTextEditor();
+            string actualResult = obj.GetStringWithLineBreaks(input, column);
+            Assert.AreEqual(expectedResult, actualResult);
+        }
     }
 }
