@@ -22,5 +22,69 @@ namespace Problems.Tests
 
             Assert.AreEqual(expectedResult, actualResult);
         }
+        [TestMethod()]
+        public void GetStringWithLineBreaksTest_WhenInputNull()
+        {
+            string input = null;
+            string expectedResult = string.Empty;
+            int column = 15;
+            AwesomeTextEditor obj = new Problems.AwesomeTextEditor();
+            string actualResult = obj.GetStringWithLineBreaks(input, column);
+
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod()]
+        public void GetStringWithLineBreaksTest_WhenInputEmpty()
+        {
+            string input = string.Empty;
+            string expectedResult = string.Empty;
+            int column = 15;
+            AwesomeTextEditor obj = new Problems.AwesomeTextEditor();
+            string actualResult = obj.GetStringWithLineBreaks(input, column);
+
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentException),"column")]
+        public void GetStringWithLineBreaksTest_WhenColumnIsZero()
+        {
+            string input = "The quick brown fox jumped over the lazy dog.";
+            int column = 0;
+            AwesomeTextEditor obj = new Problems.AwesomeTextEditor();
+            string actualResult = obj.GetStringWithLineBreaks(input, column);
+        }
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentException), "column")]
+        public void GetStringWithLineBreaksTest_WhenColumnIsNegetiveNumber()
+        {
+            string input = "The quick brown fox jumped over the lazy dog.";
+            int column = -10;
+            AwesomeTextEditor obj = new Problems.AwesomeTextEditor();
+            string actualResult = obj.GetStringWithLineBreaks(input, column);
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentException), "column")]
+        public void GetStringWithLineBreaksTest_WhenColumnIsGrearThanInputStringLength()
+        {
+            string input = "The quick brown fox jumped over the lazy dog.";
+            int column = 100;
+            AwesomeTextEditor obj = new Problems.AwesomeTextEditor();
+            string actualResult = obj.GetStringWithLineBreaks(input, column);
+        }
+
+        [TestMethod()]
+        public void GetStringWithLineBreaksTest_WhenStringIsBigBank()
+        {
+            string input = "                              ";
+            int column = 5;
+            AwesomeTextEditor obj = new Problems.AwesomeTextEditor();
+            string actualResult = obj.GetStringWithLineBreaks(input, column);
+            Assert.AreEqual(string.Empty, actualResult);
+        }
+
+     
     }
 }

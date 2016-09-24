@@ -10,6 +10,11 @@ namespace Problems
     {
         public string GetStringWithLineBreaks( string input,int column)
         {
+            if (String.IsNullOrEmpty(input)) return string.Empty ;
+
+            if (column <= 0 || column>input.Length)
+                throw new ArgumentException(nameof(column));
+
             string[] words = input.Split(' ');   
             string finalString = string.Empty;
             string line = string.Empty;
